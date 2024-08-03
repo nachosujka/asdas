@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import CardWidget from'../CardWidget/CardWidget'
 
 
@@ -10,13 +10,13 @@ const NavBar = ({title}) =>{
       <div className='collapse navbar-collapse'>
           <ul className='navbar-nav me-auto mb-2 mb-lg-0'>
         <li className='nav-item'>
-          <Link to="/category/celular" className='nav-link active'>Celulares</Link>
+          <NavLink to="/category/celular" className={({isActive})=> (isActive ? "ActiveOption": "Option" )}>Celulares</NavLink>
           </li>
     <li className='nav-item'>
-      <Link to="/category/tv" className='nav-link'>Television</Link>
+      <NavLink to="/category/tv" className={({isActive})=> (isActive ? "ActiveOption": "Option" )}>Television</NavLink>
     </li>
     <li className='nav-item'>
-      <Link to="/category/tablet" className='nav-link active'>Tablet </Link>
+      <NavLink to="/category/tablet" className={({isActive})=> (isActive ? "ActiveOption": "Option" )}>Tablet </NavLink>
           </li>
     </ul>
     <form  className='d-flex' role='search'>
@@ -24,7 +24,7 @@ const NavBar = ({title}) =>{
         <button className='btn btn-outline-dark' typeof='submit' data-bs-theme="dark" >Buscar</button>
       </form>
       <ul className='navbar-nav me-auto mb-2 mb-lg-0'> <li className='nav-item'><a href="#" className='nav-link'>Crea tu cuenta</a></li>
-      <CardWidget/>
+      <CardWidget />
       </ul></div>
       </div>
     </nav> 

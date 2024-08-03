@@ -12,6 +12,9 @@ function ItemListContainer(){
 setProducts(res)
  })
    },[categoryId])
+
+  
+
     return(
         <> 
        <ItemList products={products}></ItemList>
