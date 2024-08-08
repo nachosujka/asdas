@@ -1,8 +1,7 @@
-// import { useContext, useState } from "react"
-// import { CartContext } from "../context/CartContext";
+
 import cart from "../../assets/cart.svg"
 import { Link } from "react-router-dom";
-import { useCart } from "../hooks/useCart";
+import { useCart } from "../../hooks/useCart";
 
 function CardWidget (){
   
