@@ -22,7 +22,7 @@ const isInCart = (id) => {
     })
     return accu;
  }
- const getTotal = ()=>{
+ const getTotal = () =>{
     let accu = 0
     cart.forEach((item)=>{
         accu += item.quantity * item.price

@@ -6,7 +6,7 @@ const products = [
     category: "celular",
     img: "https://media.pakprice.pk/288/otRdSrGmyr0jk9jpGFsDSevTiJBtoaK81UGAljcV.jpeg",
     stock: 30,
-    decription: "Celular Samsung s23 ultra",
+    description: "Celular Samsung s23 ultra",
   },
   {
     id: "ipad",
@@ -15,7 +15,7 @@ const products = [
     category: "tablet",
     img: "https://tse3.mm.bing.net/th?id=OIP.KwwOFORQ7GHBHw8l5gF_iQAAAA&pid=Api&P=0&h=180",
     stock: 10,
-    decription: "Ipad pro",
+    description: "Ipad pro",
   },
   {
     id: "tv",
@@ -24,7 +24,7 @@ const products = [
     category: "tv",
     img: "https://tse3.mm.bing.net/th?id=OIP.9AtltnXlfT-cGRTrKC8ZhAHaEj&pid=Api&P=0&w=300&h=300",
     stock: 15,
-    decription: "un43t5300agczb smart tv pantalla 43",
+    description: "un43t5300agczb smart tv pantalla 43",
   },
   {
     id: "iphone",
@@ -33,7 +33,7 @@ const products = [
     category: "celular",
     img: "https://tse3.mm.bing.net/th?id=OIP.KyrBu1s2mkrqDl3Bdo8QtAHaHa&pid=Api&P=0&h=180",
     stock: 20,
-    decription: "Celular Iphone 14 pro max",
+    description: "Celular Iphone 14 pro max",
   },
 ];
 

@@ -1,13 +1,13 @@
-import { createProductAdaptedFromFirebase } from "../../../adapters/productAdapted";
-import { db } from "../index";
 import {
   collection,
   doc,
-  getDocs,
   getDoc,
+  getDocs,
   query,
   where,
 } from "firebase/firestore";
+import { db } from "../index";
+import { createProductAdaptedFromFirebase } from "../../../adapters/ProductAdapter";
 
 export const getProducts = (categoryId) => {
   const productsCollection = categoryId
@@ -25,7 +25,7 @@ export const getProducts = (categoryId) => {
       return error;
     });
 };
-export const getProductsById = (itemId) => {
+export const getProductById = (itemId) => {
   const productDoc = doc(db, "products", itemId);
 
   return getDoc(productDoc)
@@ -33,7 +33,6 @@ export const getProductsById = (itemId) => {
       const productAdapted = createProductAdaptedFromFirebase(
         queryDocumentSnapshot
       );
-
       return productAdapted;
     })
     .catch((error) => {

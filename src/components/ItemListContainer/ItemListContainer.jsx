@@ -23,6 +23,7 @@ function ItemListContainer({greetings}) {
           Cargando productos...
         </h3>
       );
+      //setNotification("warning", `Cargando productos...`);
     }
 
     if(error) {
