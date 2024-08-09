@@ -7,10 +7,12 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 import { CartProvider } from "./context/CartContext"
 import Cart from "./components/Cart/Cart"
 import Checkout from "./components/Checkout/Checkout"
+import { NotificationProvider } from "./context/NotificationContext"
 
 function App() {
   return (
     <BrowserRouter>
+    <NotificationProvider>
     <CartProvider>
      <NavBar title="Sujka store"/>
      <Routes>
@@ -22,6 +24,7 @@ function App() {
       <Route path="*" element={<Error/>}></Route> 
      </Routes>
      </CartProvider>
+     </NotificationProvider>
     </BrowserRouter>
   )
 }

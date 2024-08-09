@@ -58,13 +58,11 @@ if (outOfStock.length === 0) {
   const orderRef = collection(db, "orders")
   const orderAdded = await addDoc(orderRef, objOrder)
   console.log(`El id de su orden es ${orderAdded.id}`)
-  // limpiar carrito
+  alert("Su compra a sido realizada")
   SetOrderCreated(true)
   clearCart()
 }else{
-  // falta la logica de compra o encargo de productos
-  <h3>Hay prodcutos que estan fuera de stock</h3>
-  console.log("Hay productos que estan fuera de stock")
+  alert("Hay productos que estan fuera de stock")
 }
     }catch(error){
       console.log("")

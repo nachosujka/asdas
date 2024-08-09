@@ -1,11 +1,9 @@
 import ItemList from "../ItemList/ItemList";
 import { useParams } from "react-router-dom";
-//import { useNotification } from "../../context/NotificationContext";
 import { getProducts } from "../../services/firebase/firestore/products";
 import { useAsync } from "../../hooks/useAsync";
-function ItemListContainer({greetings}) {
-    const {categoryId} = useParams()
-    //const {setNotification} = useNotification()  
+function ItemListContainer() {
+    const {categoryId} = useParams() 
     const asyncFunction = () => getProducts(categoryId)
 
     const { data: products, loading, error } = useAsync(asyncFunction, [categoryId]);
@@ -23,7 +21,7 @@ function ItemListContainer({greetings}) {
           Cargando productos...
         </h3>
       );
-      //setNotification("warning", `Cargando productos...`);
+  
     }
 
     if(error) {
@@ -42,7 +40,6 @@ function ItemListContainer({greetings}) {
 
   return (
     <>
-      <h2>{greetings}</h2>
       <ItemList products={products} />
     </>
   );
