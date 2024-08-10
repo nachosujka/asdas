@@ -3,6 +3,7 @@ import { useCart } from '../../hooks/useCart'
 import CartItem from '../CartItem/CartItem'
 import { Link } from 'react-router-dom'
 
+
 const Cart = () => {
     const {cart, getTotal, totalQuantity} = useCart()
     const total = getTotal()
@@ -17,9 +18,6 @@ const Cart = () => {
         <CartItem key={item.id} {...item}/>
         ))}
         <h3>Total: $ {total}</h3>
-        <div>
-          <button to="/cart" className='btn btn-primary'>Limpiar Carrito</button>
-        </div>
         <div>
           <Link to="/checkout" className='btn btn-primary'>Checkout</Link>
         </div>

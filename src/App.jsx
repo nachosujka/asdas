@@ -8,6 +8,7 @@ import { CartProvider } from "./context/CartContext"
 import Cart from "./components/Cart/Cart"
 import Checkout from "./components/Checkout/Checkout"
 import { NotificationProvider } from "./context/NotificationContext"
+import Swal from "sweetalert2"
 
 function App() {
   return (

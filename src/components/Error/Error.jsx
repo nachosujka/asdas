@@ -1,9 +1,11 @@
+import Swal from "sweetalert2";
 
 const Error = () => {
   return (
-    <div>
-      <h2>Error</h2>
-    </div>
+    Swal.fire({
+      text: "Error",
+      icon: "error"
+    })
   )
 }
 

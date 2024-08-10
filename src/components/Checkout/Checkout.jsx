@@ -2,7 +2,7 @@ import  { useState } from 'react'
 import { useCart } from '../../hooks/useCart'
 import { addDoc, collection, documentId, getDocs, query, where, writeBatch } from "firebase/firestore"
 import {db} from '../../services/firebase'
-
+import Swal from 'sweetalert2'
  const Checkout = () => {
 
   const [loading, setLoading] = useState(false)
@@ -17,7 +17,7 @@ import {db} from '../../services/firebase'
     try{
 const objOrder ={
   buyer:{
-    firstName: "Leandro",
+    name: "Leandro",
 lastName: "Martinez",
 phone: "1147983147",
 addres: "qcq"
@@ -58,11 +58,17 @@ if (outOfStock.length === 0) {
   const orderRef = collection(db, "orders")
   const orderAdded = await addDoc(orderRef, objOrder)
   console.log(`El id de su orden es ${orderAdded.id}`)
-  alert("Su compra a sido realizada")
+  Swal.fire({
+    text: "Su compra a sido realizada",
+    icon: "success"
+  })
   SetOrderCreated(true)
   clearCart()
 }else{
-  alert("Hay productos que estan fuera de stock")
+  Swal.fire({
+    text: "Hay productos que estan fuera de stock",
+    icon: "error"
+  })
 }
     }catch(error){
       console.log("")
