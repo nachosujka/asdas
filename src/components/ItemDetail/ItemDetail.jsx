@@ -3,7 +3,6 @@ import ItemCount from "../ItemCount/ItemCount";
 import { Link } from "react-router-dom";
 import { useNotification } from "../../context/NotificationContext";
 const ItemDetail = ({name, img, description, stock, category, id, price}) => {
-  //const {addItem, isInCart} = useContext(CartContext)
   const {addItem, isInCart} = useCart();
   const {setNotification} = useNotification()
 
@@ -16,7 +15,6 @@ const ItemDetail = ({name, img, description, stock, category, id, price}) => {
     } 
     addItem(produtObj)
     setNotification("success", `Se agregaron ${count} de ${name}`);
-    //setQuantity(cantidad)
   }
   
   return (

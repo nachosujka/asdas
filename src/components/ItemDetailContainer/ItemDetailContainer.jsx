@@ -15,7 +15,6 @@ const ItemDetailContainer = () => {
 setProducts(products)
         })
         .catch(err =>{
-          console.log("err")
          }
          )
          .finally(()=>{
